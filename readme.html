@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>FraudLabs Credit Card Fraud Prevention: Installation Guide</title>
+<style>
+html {
+	background:#f5f6f7;
+}
+
+body {
+	font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Arial, Tahoma, Verdana, sans-serif;
+	font-size:16px;
+	line-height:1.65;
+	color:#222;
+	max-width:1000px;
+	margin:0 auto;
+	padding:36px 32px;
+	background:#fff;
+	box-sizing:border-box;
+}
+
+h1 {
+	font-size:1.9em;
+	line-height:1.25;
+	margin:0 0 0.6em;
+}
+
+h3 {
+	font-size:1.35em;
+	margin:1.8em 0 0.6em;
+}
+
+p {
+	margin:0 0 1em;
+}
+
+ul, ol {
+	margin:0 0 1em;
+	padding-left:1.5em;
+}
+
+li {
+	margin:0.35em 0;
+}
+
+a {
+	color:#0b57d0;
+}
+
+code {
+	background:#f1f3f4;
+	padding:1px 5px;
+	border-radius:3px;
+	font-size:0.92em;
+}
+
+.header {
+	background:#FC6859;
+	color:#FFFFFF;
+	font-weight:bold;
+	font-size:1.05em;
+	padding:8px 12px;
+	margin:28px 0 14px;
+	border-radius:4px;
+}
+
+textarea {
+	border:solid 1px #b6b6b6;
+	border-radius:4px;
+	width:100%;
+	min-height:80px;
+	padding:8px 10px;
+	font-family:Consolas, "Courier New", monospace;
+	font-size:14px;
+	line-height:1.45;
+	box-sizing:border-box;
+	resize:vertical;
+}
+</style>
+</head>
+<body>
+<h1>ZenCart: FraudLabs Pro&trade; Credit Card Fraud Prevention v1.8.0</h1>
+<h3>Overview</h3>
+<p>This plugin screens the online transactions, especially the credit card orders, for potential fraud. It helps the users to minimize their risk in accepting fraudulent orders, while allowing legitimate users to continue enjoy their shopping experience, without erroneously rejected the valid order. </p>
+<p>This plugin returns user a fraud indicator and comprehensive validation results for an online order, so that store owners can make the right decision if to proceed or reject an order. Furthermore, it also enables store owners  to customize the validation logic by defining their own fraud checking rules based on their business needs. Inevitably, this solution helps to minimize fraud and chargebacks losses and improve business profits.</p>
+<p>Find out more information at <a href="https://www.fraudlabspro.com" target="_blank">https://www.fraudlabspro.com</a>. You can sign up a free account at <a href="https://www.fraudlabspro.com/sign-up?r=zencart" target="_blank">https://www.fraudlabspro.com/sign-up</a> to start using this awesome feature. (There are paid options that provide more options and higher API limits within the FraudLabs Pro API, however, you do NOT need to sign up for them and this program will operate the same.)</p>
+<img src="images/screenshot.png" style="max-width: 100%; height: auto; display: block; margin: 16px auto 24px; border: 1px solid #000;" alt="An example of the FraudLabs Pro as it appears in the ZenCart Admin Dashboard.">
+<h3>Installation</h3>
+<div style="margin:10px;">
+  <p><em>Please take note that the "server" in this readme means the location where you install the ZenCart and </em><em>that the *admin* folder refers to the ZenCart admin folder which was renamed during the ZenCart installation.</em></p>
+	<p><em>This solution requires ZenCart 2.0 or later and PHP 8. It has been tested on ZenCart 2.0.1, 2.1.0 and 2.2.x. Backwards compatibility with earlier ZenCart versions and earlier PHP versions is not guaranteed.</em></p>
+	<p> <em>IMPORTANT: Please BACKUP the ZenCart source files in your server before proceed with the below upgrade!</em></p>
+</div>
+<div class="header">Step 1: Upload the plugin</div>
+<ol>
+	<li>Unzip the package to a folder on your desktop.</li>
+	<li>Upload the <b>zc_plugins/FraudLabsPro</b> folder to the <b>zc_plugins</b> directory in the ROOT of your ZenCart installation. The result should be <code>zc_plugins/FraudLabsPro/1.8.0/</code>.</li>
+</ol>
+<div class="header">Step 2: Install from Plugin Manager</div>
+<ol>
+	<li>Go to Admin area -&gt; Modules -&gt; Plugin Manager.</li>
+	<li>Find <b>FraudLabs Pro</b> in the list and click <b>Install</b>. The installer creates the <code>orders_fraudlabspro</code> table and the configuration settings automatically. No SQL patch and no core-file edit are required.</li>
+	<li>After installation the plugin is enabled. Use <b>Disable</b> to stop screening while keeping your settings and stored results, or <b>Uninstall</b> to remove the settings and drop the table.</li>
+</ol>
+<div class="header">Step 3: Get a free FraudLabs Pro license key</div>
+<ol>
+	<li>You need a FraudLabs Pro license key. You can register a free license key at <a href="https://www.fraudlabspro.com/sign-up" target="_blank">https://www.fraudlabspro.com/sign-up</a> if you do not have one.</li>
+	<li>Go to Admin area -&gt; Tools -&gt; FraudLabs Pro</li>
+	<li>Find <strong>License Key</strong> and update it with your license key. </li>
+	<li><strong>You do NOT need a callback URL.</strong> (This module will call the FraudLabs servers when needed.)</li>
+</ol>
+<p><strong>IP Override (testing)</strong> - enter an IPv4 or IPv6 address to send that address to FraudLabs Pro instead of the visitor's actual IP. The real address is still stored with the order. Leave this empty in production; it is only meant for testing and debugging.</p>
+<div class="header">Step 4: Done</div>
+<ol>
+	<li>You have successfully completed the installation process.</li>
+	<li>What's next!? You can start customizing your fraud checking rules at <a href="https://www.fraudlabspro.com" target="_blank">https://www.fraudlabspro.com</a> and start protecting your business from unwanted fraud attempts.</li>
+	<li>If you want to enable the <a href="https://www.fraudlabspro.com/developer/javascript" target="_blank">Agent Javascript</a> function, you can do so from Admin -&gt; Tools -&gt; FraudLabs Pro.</li>
+</ol>
+<div class="header" style="background-color: #000000;color:#FFF;font-weight:bold;">Updating from an unencapsulated version? READ THIS!!!</div>
+<p>Earlier releases were installed by copying files into <code>includes/</code> and the admin folder. Remove those files before installing the plugin, otherwise they will also be loaded:</p>
+    <ul>
+      <li><code>includes/classes/fraudlabspro/</code></li>
+      <li><code>includes/classes/observers/auto.fraudlabspro_process.php</code></li>
+      <li><code>includes/extra_datafiles/flp_orders.php</code></li>
+      <li><code>includes/modules/fraudlabspro/</code> (the old <code>fraudlabspro.php</code>)</li>
+      <li><code>includes/modules/pages/checkout_process/header_php.php</code> (restore the original ZenCart file, which removes the <code>require(DIR_WS_MODULES . 'fraudlabspro/fraudlabspro.php')</code> line)</li>
+      <li><code>includes/modules/pages/checkout_confirmation/jscript_fraudlabspro.php</code></li>
+      <li><em>admin</em><code>/includes/classes/observers/auto.fraudlabspro_admin_order.php</code></li>
+      <li><em>admin</em><code>/includes/classes/observers/auto.fraudlabspro_order_delete.php</code></li>
+      <li><em>admin</em><code>/includes/classes/observers/auto.zcObserverFraudlabsProOrderDelete.php</code> (only present in 1.5.x packages)</li>
+      <li><em>admin</em><code>/includes/extra_datafiles/flp_orders.php</code></li>
+      <li><em>admin</em><code>/includes/languages/english/extra_definitions/lang.fraudlabspro.php</code></li>
+      <li><em>admin</em><code>/includes/modules/fraudlabspro/</code></li>
+      <li>Remove the <code>include(DIR_WS_MODULES . 'fraudlabspro/summary.php')</code> line from <em>admin</em>/orders.php if an earlier version added it.</li>
+    </ul>
+    <p>Your existing results are kept. The installer detects the previous table and upgrades its columns to the current schema. If you are coming from 1.4.x, run <b>alter_flp_orders.sql</b> once with Tools -&gt; Install SQL Patches before installing the plugin.</p>
+    <p>The root-level SQL files are only needed for manual installs: <b>flp_orders.sql</b> creates the table and settings, and <b>alter_flp_orders.sql</b> is only needed when upgrading from 1.4.x before installing the plugin.</p>
+<div style="margin-top:50px;">Copyright&copy; 2026 <a href="https://www.fraudlabspro.com">FraudLabs Pro</a>. All Rights Reserved.</div>
+</body>
+</html>
