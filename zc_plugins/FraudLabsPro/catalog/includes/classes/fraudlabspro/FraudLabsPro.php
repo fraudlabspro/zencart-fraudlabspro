@@ -2,7 +2,7 @@
 
 class FraudLabsPro
 {
-    public const VERSION = '1.8.0';
+    public const VERSION = '1.8.1';
 
     private const SCREEN_URL = 'https://api.fraudlabspro.com/v2/order/screen';
     private const FEEDBACK_URL = 'https://api.fraudlabspro.com/v2/order/feedback';

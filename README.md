@@ -1,4 +1,4 @@
-# ZenCart: FraudLabs Pro™ Credit Card Fraud Prevention v1.8.0
+# ZenCart: FraudLabs Pro™ Credit Card Fraud Prevention
 
 ## Overview
 
@@ -21,7 +21,7 @@ Find out more at [https://www.fraudlabspro.com](https://www.fraudlabspro.com). Y
 ### Step 1: Upload the plugin
 
 1. Unzip the package to a folder on your desktop.
-2. Upload the `zc_plugins/FraudLabsPro` folder to the `zc_plugins` directory in the root of your ZenCart installation. The result should be `zc_plugins/FraudLabsPro/1.8.0/`.
+2. Upload the `zc_plugins/FraudLabsPro` folder to the `zc_plugins` directory in the root of your ZenCart installation. The result should be `zc_plugins/FraudLabsPro/<version>/`.
 
 ### Step 2: Install from Plugin Manager
 

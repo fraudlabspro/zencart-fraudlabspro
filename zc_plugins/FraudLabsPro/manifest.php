@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'pluginVersion' => 'v1.8.0',
+    'pluginVersion' => 'v1.8.1',
     'pluginName' => 'FraudLabs Pro',
     'pluginDescription' => 'Screens orders for fraud with the FraudLabs Pro API and shows the validation results on the admin order page.',
     'pluginAuthor' => 'Paul Williams (retched), FraudLabs Pro',
